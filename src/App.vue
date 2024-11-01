@@ -1,30 +1,45 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-</template>
+   <v-layout class="rounded rounded-md">
+    <v-navigation-drawer>
+      <v-list>
+        <v-list-item title="Navigation drawer"></v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+    <v-app-bar title="Application bar"></v-app-bar>
+
+    <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
+      Main Content
+    </v-main>
+  </v-layout>
+  <v-app id="inspire">
+    <v-app-bar extended>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+      <v-app-bar-title>Application</v-app-bar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon="mdi-dots-vertical">
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <v-container>
+        <v-row>
+          <v-col
+            v-for="n in 24"
+            :key="n"
+            cols="4"
+          >
+            <v-card height="200"></v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
+</template>
