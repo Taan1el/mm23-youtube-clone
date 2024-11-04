@@ -142,7 +142,7 @@ const videoCards = [
             rounded>
           </v-autocomplete>
 
-      <v-avatar>
+      <v-avatar class="d-flex align-center mr-5" size="45">
         <v-img src="https://thispersondoesnotexist.com/"/>
       </v-avatar>
     </v-app-bar>
@@ -171,20 +171,20 @@ const videoCards = [
           <v-col v-for="(video, index) in videoCards" :key="index" cols="4" sm="6" md="4" lg="3">
             <v-card class="elevation-2" outlined>
               
-              <v-img :src="video.thumbnail" height="200px">
+              <v-img :src="video.thumbnail" height="250px">
                 <template #append>
                   <div class="videopikkus">{{ video.videopikkus }}</div>
                 </template>
               </v-img>
 
-              <v-card-subtitle class="mt-2, sm=6">
-                  <v-avatar>
+              <v-card-subtitle class="d-flex align-center" style="gap: 20px;">
+                  <v-avatar size="45">
                     <v-img src="https://thispersondoesnotexist.com/"/>
                   </v-avatar>
                   <span class="video-title">{{ video.title }}</span>
               </v-card-subtitle>
 
-              <v-card-subtitle class="text-muted">
+              <v-card-subtitle class="align-center mt-4 text-muted">
                 <span class="channel">{{ video.channel }}</span><br />
                 <span class="vaatamist">{{ video.vaatamist }} • {{ video.timeAgo }}</span>
               </v-card-subtitle>
@@ -197,10 +197,7 @@ const videoCards = [
   </v-app>
 </template>
 
-<style scoped>
-.channelpfp {
- 
-}
+<style>
 
 .videopikkus {
   position: absolute;
@@ -215,7 +212,7 @@ const videoCards = [
 
 .video-title {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .channel,
