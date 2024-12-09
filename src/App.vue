@@ -175,7 +175,7 @@ const videoCards = [
 
     <v-app-bar>
       <v-img max-width="30" max-height="40" cover
-        src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" />
+        src="src\assets\youtube.png"/>
       <v-app-bar-title style="font-weight: 600; max-width: 100px">YouTube</v-app-bar-title>
 
       <v-autocomplete :items="items" class="mx-auto" density="comfortable" menu-icon="mdi-magnify" placeholder="Search"
@@ -257,6 +257,7 @@ const videoCards = [
 <style scoped>
 .video-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .video-card:hover {
